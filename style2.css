@@ -1,0 +1,40 @@
+/* So it goes stylesheet -> body/div/span -> myclass -> id -> try never to style in the HTML file directly if possible*/
+
+.myclass{
+  background-color: bisque;
+}
+ 
+#mysection1{
+  background-color: rgba(200,100,50,0.5);
+  /* opacity */
+}
+
+header{
+  /*background-color: rgba(255,10,20,0.5);
+  color: blue;*/
+  background-image: url(hot_butter_a.png);
+  /*opacity: 0.5;*/
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header p{
+  color: blue;
+}
+
+body{
+    background-color: lightgrey;
+}  
+
+nav{
+  background-color: 
+}
+div{
+  border: 0.1rem solid grey;
+  margin: 2rem;
+}
+
+span{
+  background-color: aqua;
+}
