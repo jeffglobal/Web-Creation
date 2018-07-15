@@ -1,40 +1,94 @@
 /* So it goes stylesheet -> body/div/span -> myclass -> id -> try never to style in the HTML file directly if possible*/
 
+/* Imported google fonts */
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+/* @import url('https://fonts.googleapis.com/css?family=Overlock:400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 .myclass{
   background-color: bisque;
-}
+ }
  
 #mysection1{
   background-color: rgba(200,100,50,0.5);
+  display: list-item;
   /* opacity */
 }
+/* Descendent selector */
+#mysection2 span{
+  background-color: yellow; 
+}
+
+/* Child selector*/
+ #mysection2 > .myclass{
+  background-color: red; 
+} 
+/*General Sibling Selectors looking at what's happening with the parents */
+ #mysection3 ~ .myclass, li, nav{
+  /* [commas seem to NOT work] I can't seem to change anything this way, but it does look to the .myclass attributes and applies */
+  
+} 
+
+/* Sibling selector ***doesn't work***
+#mysection2 span + span{
+  background-color: yellow; */
 
 header{
   /*background-color: rgba(255,10,20,0.5);
   color: blue;*/
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: 'Courgette'; 
+  border: 0.4rem solid black;
+  border-radius: 0.5rem 1rem 0.5rem;
   background-image: url(hot_butter_a.png);
   /*opacity: 0.5;*/
-  background-position: bottom;
+  background-position: 50% 75%; /*Nive relative to "x and y"*/
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/*properties of pseudoclass for header...can be used independently or instead of having header{} reg properties before it*/
+header:hover{
+  opacity: 0.5;
+}
+
 header p{
   color: blue;
+  opacity: 100%; /* won't override above opacity setting...*/
 }
 
 body{
     background-color: lightgrey;
+    font-family: 'Permanent Marker'; 
 }  
 
 nav{
   background-color: 
 }
+
 div{
   border: 0.1rem solid grey;
-  margin: 2rem;
+  /*margin: 2rem;*/
 }
 
 span{
+  display:list-item;
+  margin-left: 1rem;
   background-color: aqua;
+  list-style-type: square;
 }
+
+span::after{
+  content: " Yo!";
+  color: chartreuse;
+  background-color: bisque;
+}
+/*span::before{}; */
+
+li:nth-child(5){
+  color:red;
+}
+/*first-child()
+/*last-child()
+/*even*/

@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+	font-family: 'Permanent Marker'
+}
+
+/* Overflow...controlling content to fill only specific area of page */
+#mysection1 {
+	border: 0.1rem solid black;
+	height: 10rem;
+	width: 20rem;
+	overflow: auto;
+/* scroll, etc., */
+}
+
+#mysection3{
+	-webkit-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58);
+-moz-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58);
+box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58);
+}
